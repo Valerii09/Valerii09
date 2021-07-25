@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CraftBar</title>
+  <link rel="stylesheet" href="css\barcart.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span><a href="index.html">CraftBar</a></span>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Карта бара</h1> 
+    <img src="https://images.squarespace-cdn.com/content/v1/56694c6e841aba7940a9111c/1575435358368-93R59ND1LNXQ7O8Q5DYB/Карта+бара+Чердак+1+%28мини+%29.jpg" alt="">
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
